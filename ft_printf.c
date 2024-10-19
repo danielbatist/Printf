@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:23:13 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/18 20:49:47 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/18 21:14:06 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	main(void)
 	printf("---------------------\n");
 	
 	char	*str = "hello world";
-	char	*str1 = "";
+	char	*str1 = "NULL";
 	
 	printf("Teste String\n");
 	printf("%i\n", printf("%s\n", str1));

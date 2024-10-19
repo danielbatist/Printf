@@ -6,12 +6,13 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 20:54:30 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/18 21:01:24 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/18 21:17:26 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 #include <limits.h>
+#include <stdio.h>
 #include "ft_printf.h"
 
 int	main(void)
@@ -27,7 +28,7 @@ int	main(void)
 	printf("%i\n", ft_printf("%c as %c fs %c ap %c 11\n", c1, c2, c3, c4));
 	printf("---------------------\n");
 	char	*str = "hello world";
-	char	*str1 = "";
+	char	*str1 = NULL;
 	printf("Teste String\n");
 	printf("%i\n", printf("%s\n", str1));
 	printf("%i\n", ft_printf("%s\n", str1));
