@@ -2,12 +2,9 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-LIBFT_DIR = ./libft.a
-LIBFT = $(LIBFT_DIR)/libft.a
-
 NAME = libftprintf.a
 
-SRC = ft_printf.c ft_char_print.c ft_hex_print.c ft_int_print.c ft_str_print.c ft_uns_print.c
+SRC = ft_printf.c ft_print_base.c ft_print_hex.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -16,18 +13,15 @@ all: $(NAME)
 .c.o: 
 	@$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
-$(NAME): $(OBJ) $(LIBFT)
-	ar rcs $@ $(OBJ) $(LIBFT)
-
-LIBFT:
-	@make -C $(LIBFT_DIR)
+$(NAME): $(OBJ)
+	ar rcs $@ $(OBJ)
 
 clean: 
-	@rm -f $(OBJ) $(OBJ_BONUS) $(LIBFT_DIR)
+	@rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME) $(LIBFT_DIR)
+	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean
